@@ -1,0 +1,715 @@
+/* Additional Utilities for Home */
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-6 {
+    margin-top: 1.5rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.mt-12 {
+    margin-top: 3rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-10 {
+    margin-bottom: 2.5rem;
+}
+
+.text-white {
+    color: var(--color-white) !important;
+}
+
+.text-light-blue {
+    color: #bfdbfe !important;
+}
+
+.text-gray {
+    color: var(--color-text-light);
+}
+
+.bg-light {
+    background-color: transparent;
+}
+
+/* Admission Services Redesign */
+.admission-services-section {
+    position: relative;
+    background-color: transparent;
+}
+
+.admission-hero {
+    padding: 2rem 0 3rem 0;
+}
+
+.admission-hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.admission-hero-content {
+    flex: 1;
+}
+
+.admission-hero-title {
+    font-size: 4rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.admission-hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: 2.5rem;
+}
+
+.btn-book-appointment {
+    background-color: #dc2626;
+    border-color: #dc2626;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+}
+
+.btn-book-appointment:hover {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+}
+
+.admission-hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-illustration {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+.animate-3d-float {
+    animation: float3d 6s ease-in-out infinite;
+    filter: drop-shadow(0 25px 15px rgba(0, 0, 0, 0.15));
+}
+
+@keyframes float3d {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(1.5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Cards Wrapper */
+.admission-cards-wrapper {
+    margin-top: -2rem;
+    padding-bottom: 2rem;
+}
+
+.admission-cards-marquee {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    /* Base offset */
+    position: relative;
+    /* Optional: Fading edges if desired, but we'll leave it clean for the cards */
+}
+
+.admission-cards-track {
+    display: flex;
+    width: max-content;
+    animation: scrollCards 40s linear infinite;
+}
+
+.admission-cards-track:hover {
+    animation-play-state: paused;
+}
+
+.admission-cards-group {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 0.75rem;
+    /* half of gap to stitch perfectly */
+}
+
+@keyframes scrollCards {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.admission-footer-text {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.admission-footer-text p {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.btn-learn-more {
+    background-color: #dc2626;
+    border-color: #dc2626;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2.5rem;
+}
+
+.btn-learn-more:hover {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+}
+
+@media (max-width: 900px) {
+    .admission-hero {
+        padding: 3rem 0 5rem 0;
+    }
+
+    .admission-cards-wrapper {
+        margin-top: -3rem;
+        padding-bottom: 2rem;
+    }
+
+    .admission-hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .admission-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .service-card {
+        padding: 1rem 0.5rem;
+        min-height: 140px;
+        width: 150px;
+    }
+
+    .service-card .service-icon-wrapper {
+        margin-bottom: 0.5rem;
+    }
+
+    .service-card .service-title {
+        font-size: 0.8rem;
+    }
+}
+
+/* About Preview */
+.about-dark-section {
+    background-color: #2c2d2e;
+}
+
+.about-dark-section .section-heading,
+.about-dark-section .about-text {
+    color: #ffffff;
+}
+
+.about-dark-section .btn-primary {
+    background-color: #444466;
+}
+
+.about-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* App Assistance */
+.app-assistance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.app-assistance-image img {
+    width: 100%;
+    height: auto;
+}
+
+.checklist {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    background-color: var(--color-white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+}
+
+.check-icon {
+    color: #10b981;
+    /* A subtle green for checkmarks */
+    flex-shrink: 0;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    background-color: #2c2d2e;
+    color: var(--color-white);
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem 2rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.stats-grid>* {
+    flex: 1 1 200px;
+    max-width: 220px;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        gap: 2.5rem 1.5rem;
+    }
+
+    .stats-grid>* {
+        flex: 1 1 150px;
+    }
+
+    .stat-card h3 {
+        font-size: 3rem;
+    }
+
+    .stat-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        gap: 2rem 1rem;
+    }
+
+    .stats-grid>* {
+        flex: 1 1 130px;
+    }
+
+    .stat-card h3 {
+        font-size: 2.5rem;
+    }
+
+    .stat-card p {
+        font-size: 0.9rem;
+    }
+}
+
+.stat-card {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+
+.stat-card h3 {
+    font-size: 3.5rem;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.stat-card p {
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-item {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-background-alt);
+    color: var(--color-primary);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.feature-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    color: var(--color-text-light);
+}
+
+/* Testimonials */
+.testimonials-section {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.testimonials-marquee-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.testimonials-marquee-container::before,
+.testimonials-marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+}
+
+.testimonials-marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-white), transparent);
+}
+
+.testimonials-marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-white), transparent);
+}
+
+.testimonials-marquee {
+    display: flex;
+    width: fit-content;
+    animation: scrollMarquee 45s linear infinite;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.testimonials-marquee:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 1rem));
+    }
+}
+
+.testimonial-card {
+    background-color: var(--color-white);
+    padding: 2.5rem 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    position: relative;
+    width: 400px;
+    flex-shrink: 0;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 4rem;
+    color: var(--color-background-alt);
+    font-family: serif;
+    line-height: 1;
+}
+
+.stars {
+    color: #fbbf24;
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.review-text {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.student-name {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* CTA Section */
+.cta-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.cta-subheading {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Admitted Logos Section */
+.admitted-logos-section {
+    padding: 2rem 0;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.logos-slider {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    /* Break out of container to full viewport width */
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+    display: block;
+}
+
+/* Fading edges */
+.logos-slider::before,
+.logos-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15vw;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logos-slider::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logos-slider::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logos-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLogos 35s linear infinite;
+    align-items: center;
+}
+
+.logos-track:hover {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 0 2.5rem;
+}
+
+.logos-slide img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.logos-slide img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Reverse Animation Track */
+.logos-track.reverse {
+    animation: scrollLogosReverse 35s linear infinite;
+    justify-content: flex-end;
+    /* Start from the right side naturally */
+}
+
+@keyframes scrollLogosReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .logos-slide {
+        gap: 4rem;
+    }
+
+    .logos-slide img {
+        height: 45px;
+    }
+
+    .logos-slider::before,
+    .logos-slider::after {
+        width: 10vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .logos-slide {
+        gap: 2.5rem;
+    }
+
+    .logos-slide img {
+        height: 35px;
+    }
+
+    .admitted-logos-section {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .about-preview,
+    .app-assistance {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-image,
+    .app-assistance-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-assistance-image {
+        display: none;
+    }
+
+    .about-preview,
+    .app-assistance {
+        gap: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem 1rem;
+        padding: 1rem 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-item {
+        padding: 1.5rem;
+    }
+
+    .cta-heading {
+        font-size: 2rem;
+    }
+
+    .justify-mobile {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}

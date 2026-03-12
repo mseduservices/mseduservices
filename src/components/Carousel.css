@@ -1,0 +1,272 @@
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* Removed padding for flush look */
+    background-color: var(--color-background-alt);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    align-items: center;
+}
+
+.slide {
+    flex: 0 0 100vw;
+    margin: 0;
+    height: 100vh;
+    min-height: 100vh;
+    border-radius: 0;
+    /* Full straight edges */
+    position: relative;
+    overflow: hidden;
+    transform: none;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 100vw;
+        height: calc(100vh - 100px);
+        /* slightly smaller header on mobile */
+        min-height: 500px;
+        margin: 0;
+    }
+
+    /* On mobile we need to adjust the center offset so we need to override the inline style or just ensure JS matches.
+       Wait, the inline JS uses 9vw and 82vw for 80vw slides. So we can't completely change the width on mobile without breaking the JS math.
+       Let's stick to 100vw on mobile, it looks fine on mobile when overlapping left/right.
+    */
+    .slide {
+        flex: 0 0 100vw;
+        margin: 0;
+    }
+}
+
+
+
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark smooth poster gradient instead of blue */
+    background: linear-gradient(90deg,
+            rgba(8, 8, 8, 0.95) 0%,
+            rgba(8, 8, 8, 0.75) 35%,
+            rgba(8, 8, 8, 0.0) 70%,
+            rgba(0, 0, 0, 0.0) 100%);
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.slide-content {
+    color: var(--color-white);
+    max-width: 750px;
+    padding: 4rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out 0.3s;
+    position: relative;
+    z-index: 3;
+}
+
+.slide.active .slide-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-tag {
+    display: inline-block;
+    padding: 0.4rem 1.25rem;
+    background-color: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.slide-content h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 1.25rem;
+    line-height: 1.15;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+}
+
+.slide-content p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    color: #cbd5e1;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.slide-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.slide-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+    color: #f8fafc;
+    font-weight: 500;
+}
+
+.feature-icon {
+    color: #3b82f6;
+    /* Bright blue for contrast */
+}
+
+.slide-btn {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 2rem;
+}
+
+.next-btn {
+    right: 2rem;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #cbd5e1;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    padding: 0;
+}
+
+.indicator:hover {
+    background-color: #94a3b8;
+}
+
+.indicator.active {
+    background-color: var(--color-primary);
+    transform: scale(1.3);
+}
+
+@media (max-width: 992px) {
+    .slide-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .slide-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-content {
+        padding: 0 1.5rem;
+    }
+
+    .slide-content h2 {
+        font-size: 2rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev-btn {
+        left: 1rem;
+    }
+
+    .next-btn {
+        right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-content h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Increase slide width safely for mobile */
+    .slide {
+        height: 50vh;
+    }
+}

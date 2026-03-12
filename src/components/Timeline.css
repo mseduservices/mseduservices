@@ -1,0 +1,194 @@
+.timeline-section {
+    padding: 4rem 0;
+    background-color: var(--color-background-alt);
+    overflow: hidden;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 15px;
+}
+
+/* Remove original straight center line */
+.timeline::after {
+    display: none;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 40px;
+    background-color: transparent !important;
+    box-sizing: border-box;
+    /* Overlap items vertically so their horizontal borders merge perfectly */
+    margin-top: -4px;
+    z-index: 1;
+}
+
+/* RIGHT ITEM: Line loops around to the right */
+.timeline-item.right {
+    left: 50%;
+    border: 4px solid #3b82f6;
+    /* Blue line */
+    border-left: none;
+    /* Open to the center */
+    /* Create perfectly smooth semi-circle caps on the right */
+    border-radius: 0 500px 500px 0;
+    text-align: left;
+}
+
+/* LEFT ITEM: Line loops around to the left */
+.timeline-item.left {
+    left: 0;
+    border: 4px solid #3b82f6;
+    /* Blue line */
+    border-right: none;
+    /* Open to the center */
+    /* Create perfectly smooth semi-circle caps on the left */
+    border-radius: 500px 0 0 500px;
+    text-align: right;
+}
+
+/* Add a starting dot for the very first step at the top center */
+.timeline-item:first-child::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    /* Offset the dot size to center on the 4px border */
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 4px solid #3b82f6;
+    border-radius: 50%;
+}
+
+.timeline-item.right:first-child::before {
+    left: -10px;
+}
+
+.timeline-item.left:first-child::before {
+    right: -10px;
+}
+
+/* The icon container placed at the apex of the curve */
+.timeline-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 4px solid #3b82f6;
+    border-radius: 50%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #1e3a8a;
+    /* Dark blue icon */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-item.right .timeline-icon {
+    right: -30px;
+    /* Horizontally overlap the right boundary line */
+    left: auto;
+}
+
+.timeline-item.left .timeline-icon {
+    left: -30px;
+    /* Horizontally overlap the left boundary line */
+    right: auto;
+}
+
+/* The content box */
+.timeline-content {
+    padding: 1.5rem 2rem;
+    background-color: white;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    z-index: 2;
+}
+
+/* Pull the content card slightly inward away from the curved outer line */
+.timeline-item.right .timeline-content {
+    margin-right: 40px;
+}
+
+.timeline-item.left .timeline-content {
+    margin-left: 40px;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Mobile: Revert to a clean, straight vertical line so it doesn't bunch up */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: #3b82f6;
+        top: 0;
+        bottom: 0;
+        left: 31px;
+        /* 15px padding + 16px margin */
+        border-radius: 4px;
+        margin-left: -2px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding: 20px 20px 20px 70px;
+        border: none !important;
+        /* Remove the S-curves */
+        border-radius: 0 !important;
+        margin-top: 0;
+        text-align: left !important;
+    }
+
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+        margin: 0;
+        /* Reset margins */
+    }
+
+    /* Move all icons to the single straight line on the left */
+    .timeline-item.right .timeline-icon,
+    .timeline-item.left .timeline-icon {
+        left: 0px;
+        right: auto;
+        top: 30px;
+        /* Align near the top of the box instead of vertical center */
+        transform: none;
+    }
+
+    .timeline-item:first-child::before {
+        display: none;
+        /* Hide the top-center dot */
+    }
+}

@@ -1,0 +1,130 @@
+.home-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.home-popup-content {
+    background-color: var(--color-white);
+    border-radius: 0.75rem;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: var(--shadow-hover);
+    animation: pulse 0.4s ease-out;
+}
+
+.home-popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-bg-light);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.2s ease;
+}
+
+.home-popup-close:hover {
+    background: var(--color-border);
+}
+
+.home-popup-body {
+    padding: 2rem 1.5rem 1rem;
+}
+
+.home-popup-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.home-popup-header h2 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.home-popup-header p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Remove internal padding and shadows when ContactForm is rendered inside the popup */
+.home-popup-content .contact-form-wrapper {
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+/* Mobile responsive styles to make it smaller as requested */
+@media (max-width: 768px) {
+    .home-popup-overlay {
+        padding: 1rem;
+    }
+
+    .home-popup-content {
+        max-width: 340px; /* Highly restrict the width on mobile */
+        max-height: 85vh;
+        overflow-y: auto;
+        border-radius: 0.5rem;
+        margin: 0 auto;
+    }
+    
+    .home-popup-body {
+        padding: 1.25rem 1rem 1rem;
+    }
+    
+    .home-popup-header {
+        margin-bottom: 0.75rem;
+    }
+    
+    .home-popup-header h2 {
+        font-size: 1.15rem;
+        margin-bottom: 0.15rem;
+    }
+    
+    .home-popup-header p {
+        font-size: 0.8rem;
+    }
+    
+    .home-popup-close {
+        top: 0.4rem;
+        right: 0.4rem;
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Shrink the actual form elements inside the popup specifically for mobile */
+    .home-popup-content .contact-form {
+        gap: 0.6rem;
+    }
+
+    .home-popup-content .form-input,
+    .home-popup-content .form-textarea,
+    .home-popup-content .form-select {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .home-popup-content .form-submit-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        margin-top: 0.25rem;
+    }
+}

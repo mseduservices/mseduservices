@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import './Carousel.css';
 
 interface Slide {
@@ -17,38 +18,53 @@ const slides: Slide[] = [
         id: 1,
         tag: 'Engineering Admissions',
         headline: 'B.Tech Admissions 2026',
-        subtext: 'Secure your future in India\'s top engineering institutions. We provide end-to-end guidance from entrance exam counseling to final seat allotment.',
-        features: ['100% Placement Assistance', 'Top Tier University Tie-ups', 'Direct Admission Options'],
+        subtext: 'Start your engineering journey at India\'s top universities and colleges with expert admission guidance.',
+        features: ['Top University Tie-Ups', 'Direct & Management Quota Admissions', 'Career Guidance & Counseling', '100% Placement Support'],
         image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1920',
     },
     {
         id: 2,
-        tag: 'Medical Pathways',
-        headline: 'Medical Admissions',
-        subtext: 'Get admission into premier medical institutions. Complete support navigating the complex application and counseling processes.',
-        features: ['NEET Counseling Support', 'NRI & Management Quota', 'Top Medical Colleges'],
+        tag: 'Medical Admissions',
+        headline: 'Medical Admissions 2026',
+        subtext: 'Get expert support to secure admission in leading medical colleges across India.',
+        features: ['NEET Counseling Assistance', 'NRI & Management Quota Admissions', 'Guidance for Top Medical Colleges', 'Complete Admission Support'],
         image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1920',
     },
     {
         id: 3,
-        tag: 'Postgraduate Programs',
+        tag: 'MBA Admissions',
         headline: 'MBA Admissions 2026',
-        subtext: 'Accelerate your career with a top-tier MBA program. Let us simplify your admission process while you focus on your preparation.',
-        features: ['IIM & Top B-School Prep', 'Profile Building Strategies', 'GD / PI Preparation'],
+        subtext: 'Advance your career with top MBA programs and business schools across India.',
+        features: ['Top B-School Admission Guidance', 'Profile Building & Career Planning', 'Management Quota Options', 'Placement-Focused Programs'],
         image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1920',
     },
     {
         id: 4,
-        tag: 'Postgraduate Programs',
-        headline: 'MCA Admissions',
-        subtext: 'Step into the world of advanced computing. Direct and entrance-based admission assistance.',
-        features: ['TS ICET / NIMCET Guidance', 'Direct Management Quota', 'Top IT Placements'],
+        tag: 'MCA Admissions',
+        headline: 'MCA Admissions 2026',
+        subtext: 'Build a strong career in software development and advanced computing.',
+        features: ['Direct Admission Support', 'Top Universities & Colleges', 'Industry-Ready Curriculum', 'High-Demand IT Career Opportunities'],
         image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1920',
     }
 ];
 
 const Carousel = () => {
     const [current, setCurrent] = useState(0);
+    const [slideWidth, setSlideWidth] = useState(0);
+    const trackRef = useRef<HTMLDivElement>(null);
+
+    const updateSlideWidth = () => {
+        if (trackRef.current) {
+            const firstSlide = trackRef.current.querySelector('.slide') as HTMLElement;
+            if (firstSlide) setSlideWidth(firstSlide.offsetWidth);
+        }
+    };
+
+    useEffect(() => {
+        updateSlideWidth();
+        window.addEventListener('resize', updateSlideWidth);
+        return () => window.removeEventListener('resize', updateSlideWidth);
+    }, []);
 
     const nextSlide = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
     const prevSlide = () => setCurrent(current === 0 ? slides.length - 1 : current - 1);
@@ -60,11 +76,32 @@ const Carousel = () => {
         return () => clearInterval(timer);
     }, [current]);
 
+    const containerVariants: Variants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.3
+            }
+        }
+    };
+
+    const itemVariants: Variants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.5, ease: "easeOut" }
+        }
+    };
+
     return (
         <div className="carousel-wrapper">
             <div
+                ref={trackRef}
                 className="carousel-track"
-                style={{ transform: `translateX(-${current * 100}vw)` }}
+                style={{ transform: `translateX(-${current * slideWidth}px)` }}
             >
                 {slides.map((slide, index) => (
                     <div
@@ -74,18 +111,47 @@ const Carousel = () => {
                         <div className="slide-image" style={{ backgroundImage: `url(${slide.image})` }}></div>
                         <div className="slide-overlay">
                             <div className="container slide-content">
-                                <span className="slide-tag">{slide.tag}</span>
-                                <h2>{slide.headline}</h2>
-                                <p>{slide.subtext}</p>
-                                <ul className="slide-features">
-                                    {slide.features.map((feature, i) => (
-                                        <li key={i}>
-                                            <CheckCircle2 size={20} className="feature-icon" />
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <Link to="/contact" className="btn btn-primary slide-btn">Apply Now</Link>
+                                <AnimatePresence mode='wait'>
+                                    {index === current && (
+                                        <motion.div
+                                            key={`content-${slide.id}`}
+                                            variants={containerVariants}
+                                            initial="hidden"
+                                            animate="visible"
+                                        >
+                                            <motion.span variants={itemVariants} className="slide-tag">
+                                                {slide.tag}
+                                            </motion.span>
+                                            
+                                            <motion.h2 variants={itemVariants}>
+                                                {slide.headline}
+                                            </motion.h2>
+                                            
+                                            <motion.p variants={itemVariants}>
+                                                {slide.subtext}
+                                            </motion.p>
+                                            
+                                            <motion.ul variants={itemVariants} className="slide-features">
+                                                {slide.features.map((feature, i) => (
+                                                    <motion.li 
+                                                        key={i}
+                                                        variants={{
+                                                            hidden: { x: -20, opacity: 0 },
+                                                            visible: { x: 0, opacity: 1 }
+                                                        }}
+                                                    >
+                                                        <CheckCircle2 size={20} className="feature-icon" />
+                                                        {feature}
+                                                    </motion.li>
+                                                ))}
+                                            </motion.ul>
+                                            
+                                            <motion.div variants={itemVariants} className="slide-cta-group">
+                                                <Link to="/contact" className="btn btn-primary slide-btn">📞 Apply Now</Link>
+                                            </motion.div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         </div>
                     </div>

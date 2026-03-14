@@ -27,6 +27,7 @@ import sandipLogo from '../assets/Sandip University(logo).jpeg';
 import sanskritiLogo from '../assets/Sanskriti University (logo).webp';
 import guruKashiLogo from '../assets/gurukashiuniversity logo.webp';
 import vitLogo from '../assets/vit logo.png';
+import { Reveal } from '../components/Reveal';
 import './Home.css';
 
 const services = [
@@ -53,7 +54,7 @@ const stats = [
     { value: 8, suffix: "+", label: "Years of Experience" },
     { value: 10, suffix: "K+", label: "Students Guided" },
     { value: 50, suffix: "+", label: "Associated Institutions" },
-    { value: 20, suffix: "+", label: "Panel Experts" },
+    { value: 25, suffix: "+", label: "Panel Experts" },
     { value: 99, suffix: "%", label: "Success Rate" }
 ];
 
@@ -76,13 +77,18 @@ const Home = () => {
                 <div className="admission-hero bg-light">
                     <div className="container admission-hero-container">
                         <div className="admission-hero-content">
-                            <h2 className="admission-hero-title">Find Your Path</h2>
-                            <p className="admission-hero-subtitle justify-mobile">Discover the next steps in your educational journey!</p>
-                            <Link to="/contact" className="btn btn-primary btn-book-appointment">Book An Appointment</Link>
+                            <Reveal>
+                                <div>
+                                    <h2 className="admission-hero-title">Find Your Path</h2>
+                                    <p className="admission-hero-subtitle justify-mobile">Discover the next steps in your educational journey!</p>
+                                    <Link to="/contact" className="btn btn-primary btn-book-appointment">Book An Appointment</Link>
+                                </div>
+                            </Reveal>
                         </div>
                         <div className="admission-hero-image">
-                            {/* Place the user's 3D image in the public folder named image1.png */}
-                            <img src={heroImg} alt="3D Educational Journey" className="hero-illustration" />
+                            <Reveal initialY={30} delay={0.4}>
+                                <img src={heroImg} alt="3D Educational Journey" className="hero-illustration" />
+                            </Reveal>
                         </div>
                     </div>
                 </div>
@@ -107,10 +113,14 @@ const Home = () => {
                         </div>
 
                         <div className="admission-footer-text">
-                            <p>
-                                At MS EDIFY SOLUTIONS, our expert consultants are determined to help you apply to institutions that align with your potential and aspirations.
-                            </p>
-                            <Link to="/about" className="btn btn-primary btn-learn-more mt-4">Learn More</Link>
+                            <Reveal>
+                                <div>
+                                    <p>
+                                        At MS EDIFY SOLUTIONS, our expert consultants are determined to help you apply to institutions that align with your potential and aspirations.
+                                    </p>
+                                    <Link to="/about" className="btn btn-primary btn-learn-more mt-4">Learn More</Link>
+                                </div>
+                            </Reveal>
                         </div>
                     </div>
                 </div>
@@ -122,17 +132,27 @@ const Home = () => {
             <section className="section about-dark-section">
                 <div className="container about-preview">
                     <div className="about-content">
-                        <h2 className="section-heading">About MS EDIFY SOLUTIONS</h2>
-                        <p className="about-text justify-mobile">
-                            Established in 2019, MS EDIFY SOLUTIONS has been a trusted name in educational consultancy. We believe in providing transparent, accurate, and comprehensive admission support to students striving for top-tier education.
-                        </p>
-                        <p className="about-text justify-mobile">
-                            From application assistance to full-cycle enrollment in B.Tech, Medical, MBA, MCA, and Abroad programs, our expert counselors are dedicated to securing your future.
-                        </p>
-                        <Link to="/about" className="btn btn-primary mt-4">Learn More About Us</Link>
+                        <Reveal>
+                            <h2 className="section-heading">About MS EDIFY SOLUTIONS</h2>
+                        </Reveal>
+                        <Reveal delay={0.35}>
+                            <p className="about-text justify-mobile">
+                                Established in 2019, MS EDIFY SOLUTIONS has been a trusted name in educational consultancy. We believe in providing transparent, accurate, and comprehensive admission support to students striving for top-tier education.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.45}>
+                            <p className="about-text justify-mobile">
+                                From application assistance to full-cycle enrollment in B.Tech, Medical, MBA, MCA, and Abroad programs, our expert counselors are dedicated to securing your future.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.55}>
+                            <Link to="/about" className="btn btn-primary mt-4">Learn More About Us</Link>
+                        </Reveal>
                     </div>
                     <div className="about-image">
-                        <img src={aboutImg} alt="About MS EDIFY SOLUTIONS" />
+                        <Reveal initialY={40} delay={0.4}>
+                            <img src={aboutImg} alt="About MS EDIFY SOLUTIONS" />
+                        </Reveal>
                     </div>
                 </div>
             </section>
@@ -140,7 +160,9 @@ const Home = () => {
             {/* Admitted Logos Section */}
             <section className="section admitted-logos-section">
                 <div className="container">
-                    <h2 className="section-heading text-center mb-8" style={{ fontSize: '2.2rem', fontWeight: '700' }}>Our Students have been admitted</h2>
+                    <Reveal>
+                        <h2 className="section-heading text-center mb-8" style={{ fontSize: '2.2rem', fontWeight: '700' }}>Our Students have been admitted</h2>
+                    </Reveal>
                 </div>
                 <div className="logos-slider">
                     <div className="logos-track">
@@ -181,18 +203,28 @@ const Home = () => {
             <section className="section section-bg-alt">
                 <div className="container app-assistance">
                     <div className="app-assistance-image">
-                        <img src={assistImg} alt="Complete Application Assistance" />
+                        <Reveal initialY={40}>
+                            <img src={assistImg} alt="Complete Application Assistance" />
+                        </Reveal>
                     </div>
                     <div className="app-assistance-content">
-                        <h2 className="section-heading">Complete Application Assistance</h2>
-                        <p className="mb-6 text-gray">We take the stress out of the admission procedure by guiding you meticulously at every step of the counseling process.</p>
+                        <Reveal>
+                            <h2 className="section-heading">Complete Application Assistance</h2>
+                        </Reveal>
+                        <Reveal delay={0.35}>
+                            <p className="mb-6 text-gray">We take the stress out of the admission procedure by guiding you meticulously at every step of the counseling process.</p>
+                        </Reveal>
 
                         <ul className="checklist">
                             {assistanceItems.map((item, idx) => (
-                                <li key={idx}><CheckCircle2 className="check-icon" size={24} /> <span>{item}</span></li>
+                                <Reveal key={idx} delay={0.1 * idx} initialY={10}>
+                                    <li><CheckCircle2 className="check-icon" size={24} /> <span>{item}</span></li>
+                                </Reveal>
                             ))}
                         </ul>
-                        <Link to="/application-assistance" className="btn btn-secondary mt-6">View Full Process</Link>
+                        <Reveal delay={0.7}>
+                            <Link to="/application-assistance" className="btn btn-secondary mt-6">View Full Process</Link>
+                        </Reveal>
                     </div>
                 </div>
             </section>
@@ -201,35 +233,47 @@ const Home = () => {
             <section className="section why-choose-us">
                 <div className="container">
                     <div className="text-center mb-10">
-                        <h2 className="section-heading text-white">Why Choose MS EDIFY SOLUTIONS</h2>
-                        <p className="section-subheading text-light-blue">Your journey to academic excellence begins with the right guidance.</p>
+                        <Reveal>
+                            <h2 className="section-heading text-white">Why Choose MS EDIFY SOLUTIONS</h2>
+                        </Reveal>
+                        <Reveal delay={0.3}>
+                            <p className="section-subheading text-light-blue">Your journey to academic excellence begins with the right guidance.</p>
+                        </Reveal>
                     </div>
 
                     <div className="stats-grid">
                         {stats.map((stat, idx) => (
-                            <div key={idx} className="stat-card">
-                                <h3><CountUp end={stat.value} suffix={stat.suffix} duration={1.2} /></h3>
-                                <p>{stat.label}</p>
-                            </div>
+                            <Reveal key={idx} delay={0.15 * idx} initialY={20}>
+                                <div className="stat-card">
+                                    <h3><CountUp end={stat.value} suffix={stat.suffix} duration={1.2} /></h3>
+                                    <p>{stat.label}</p>
+                                </div>
+                            </Reveal>
                         ))}
                     </div>
 
                     <div className="features-grid mt-12">
-                        <div className="feature-item">
-                            <div className="feature-icon"><Star size={24} /></div>
-                            <h4>Expert Counsellors</h4>
-                            <p>Highly experienced professionals guiding you to the best institutions.</p>
-                        </div>
-                        <div className="feature-item">
-                            <div className="feature-icon"><CheckCircle2 size={24} /></div>
-                            <h4>Transparent Process</h4>
-                            <p>100% genuine guidance with no hidden fees or false promises.</p>
-                        </div>
-                        <div className="feature-item">
-                            <div className="feature-icon"><Globe size={24} /></div>
-                            <h4>Multiple Locations</h4>
-                            <p>Accessible branch offices in Hyderabad and Narayanpet for your convenience.</p>
-                        </div>
+                        <Reveal delay={0.4}>
+                            <div className="feature-item">
+                                <div className="feature-icon"><Star size={24} /></div>
+                                <h4>Expert Counsellors</h4>
+                                <p>Highly experienced professionals guiding you to the best institutions.</p>
+                            </div>
+                        </Reveal>
+                        <Reveal delay={0.5}>
+                            <div className="feature-item">
+                                <div className="feature-icon"><CheckCircle2 size={24} /></div>
+                                <h4>Transparent Process</h4>
+                                <p>100% genuine guidance with no hidden fees or false promises.</p>
+                            </div>
+                        </Reveal>
+                        <Reveal delay={0.6}>
+                            <div className="feature-item">
+                                <div className="feature-icon"><Globe size={24} /></div>
+                                <h4>Multiple Locations</h4>
+                                <p>Accessible branch offices in Hyderabad and Narayanpet for your convenience.</p>
+                            </div>
+                        </Reveal>
                     </div>
                 </div>
             </section>
@@ -238,7 +282,9 @@ const Home = () => {
             <section className="section testimonials-section">
                 <div className="container">
                     <div className="text-center">
-                        <h2 className="section-heading">What Our Students Say</h2>
+                        <Reveal>
+                            <h2 className="section-heading">What Our Students Say</h2>
+                        </Reveal>
                     </div>
 
                     <VideoTestimonials />
@@ -341,28 +387,40 @@ const Home = () => {
             <section className="section bg-light" id="contact-form-section">
                 <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
                     <div>
-                        <h2 className="section-heading">Have Questions?</h2>
-                        <p className="about-text" style={{ marginBottom: '2rem' }}>
-                            Fill out the form with your details and specific queries. Our expert counselors will get back to you with personalized guidance for your educational journey.
-                        </p>
+                        <Reveal>
+                            <h2 className="section-heading">Have Questions?</h2>
+                        </Reveal>
+                        <Reveal delay={0.3}>
+                            <p className="about-text" style={{ marginBottom: '2rem' }}>
+                                Fill out the form with your details and specific queries. Our expert counselors will get back to you with personalized guidance for your educational journey.
+                            </p>
+                        </Reveal>
 
-                        <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
-                            <img src={formImg} alt="Contact Us form illustration" style={{ maxHeight: '250px' }} />
-                        </div>
+                        <Reveal delay={0.5} initialY={20}>
+                            <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
+                                <img src={formImg} alt="Contact Us form illustration" style={{ maxHeight: '250px' }} />
+                            </div>
+                        </Reveal>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--color-primary)' }}>
-                                <PhoneCall size={24} />
-                                <span style={{ fontSize: '1.1rem', fontWeight: 600 }}>+91 9154236206</span>
+                        <Reveal delay={0.7}>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--color-primary)' }}>
+                                    <PhoneCall size={24} />
+                                    <span style={{ fontSize: '1.1rem', fontWeight: 600 }}>+91 9154236206</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--color-primary)' }}>
+                                    <WhatsAppIcon size={24} />
+                                    <span style={{ fontSize: '1.1rem', fontWeight: 600 }}>+91 9666236206 (WhatsApp)</span>
+                                </div>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--color-primary)' }}>
-                                <WhatsAppIcon size={24} />
-                                <span style={{ fontSize: '1.1rem', fontWeight: 600 }}>+91 9666236206 (WhatsApp)</span>
-                            </div>
-                        </div>
+                        </Reveal>
                     </div>
                     <div>
-                        <ContactForm />
+                        <Reveal delay={0.4} initialY={40}>
+                            <div>
+                                <ContactForm />
+                            </div>
+                        </Reveal>
                     </div>
                 </div>
             </section>

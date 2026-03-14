@@ -1,4 +1,5 @@
 import { Routes, Route, Outlet } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingIcons from './components/FloatingIcons';
@@ -26,6 +27,7 @@ import './App.css';
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <ScrollToTop />
       <Navbar />
       <main style={{ flexGrow: 1 }}>
         {children}

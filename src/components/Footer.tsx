@@ -84,7 +84,7 @@ const Footer = () => {
                         <button className="text-link-inline" onClick={() => setActiveModal('cancellation')}>Cancellation and Return Policy</button>
                     </div>
                     <p className="footer-copyright mt-2">
-                        Copyright {new Date().getFullYear()} &copy; <span className="highlight-text">MS EDIFY SOLUTIONS</span>, Developed & Maintained by: <span className="highlight-text">Partha saradhi</span>
+                        Copyright {new Date().getFullYear()} &copy; <span className="highlight-text">MS EDIFY SOLUTIONS</span>, Developed & Maintained by: <a href="https://partha-theta.vercel.app/" target="_blank" rel="noopener noreferrer" className="highlight-text" style={{textDecoration: 'none'}}>Partha saradhi</a>
                     </p>
                 </div>
             </div>

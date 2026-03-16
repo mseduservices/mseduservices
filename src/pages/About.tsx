@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Reveal } from '../components/Reveal';
+import srinivasRao from '../assets/srinivas Roa.jpg';
 import './About.css';
 const About = () => {
     return (
@@ -27,7 +28,7 @@ const About = () => {
                     </Reveal>
                     <div className="director-wrap">
                         <Reveal initialY={30} delay={0.4}>
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200" alt="Srinivasa Rao - Founder and Director" />
+                            <img src={srinivasRao} alt="Srinivasa Rao - Founder and Director" />
                         </Reveal>
                         <Reveal delay={0.3}>
                             <div>

@@ -54,12 +54,12 @@
 
 @keyframes scroll-videos {
     from {
-        transform: translateX(0);
+        /* Start from the middle since we duplicated the original array */
+        transform: translateX(calc(-50% - 1rem));
     }
 
     to {
-        /* Move exactly 50% since we duplicated the original array */
-        transform: translateX(calc(-50% - 1rem));
+        transform: translateX(0);
     }
 }
 

@@ -6,7 +6,7 @@
 .about-container {
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 2.5rem;
 }
 
 .about-block-title {
@@ -39,16 +39,18 @@
 
 .director-wrap {
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5rem;
     align-items: flex-start;
 }
 
 .director-wrap img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+    width: 240px;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
     flex-shrink: 0;
-    background-color: var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 .grid-2-col {
@@ -65,10 +67,12 @@
 
     .director-wrap {
         flex-direction: column;
+        align-items: center;
     }
 
     .director-wrap img {
-        width: 150px;
-        height: 150px;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
     }
 }

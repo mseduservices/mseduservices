@@ -332,7 +332,7 @@ const Home = () => {
                                     {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
                                 </div>
                                 <p className="review-text">"Professional, transparent, and extremely knowledgeable about the latest engineering admission protocols."</p>
-                                <h4 className="student-name">- Srinivas Rao</h4>
+                                <h4 className="student-name">- Sreenivas Mothi</h4>
                             </div>
 
                             {/* Duplicate Set for Infinite Scroll */}
@@ -376,7 +376,7 @@ const Home = () => {
                                     {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
                                 </div>
                                 <p className="review-text">"Professional, transparent, and extremely knowledgeable about the latest engineering admission protocols."</p>
-                                <h4 className="student-name">- Srinivas Rao</h4>
+                                <h4 className="student-name">- Sreenivas Mothi</h4>
                             </div>
                         </div>
                     </div>

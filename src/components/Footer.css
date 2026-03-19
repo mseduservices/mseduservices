@@ -153,7 +153,7 @@
 }
 
 .highlight-text {
-    color: #1E70BA;
+    color: var(--color-primary);
     font-weight: 1000;
 }
 

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import InstagramIcon from './InstagramIcon';
-import logoImg from '../assets/logo_final.png';
+import logoImg from '../assets/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -36,14 +36,14 @@ const Navbar = () => {
             <div className="top-bar">
                 <div className="container top-bar-container">
                     <div className="top-bar-left">
-                        <a href="tel:+919246377055" className="top-contact"><Phone size={14} /> +91 92463 77055</a>
+                        <a href="tel:+919666236206" className="top-contact"><Phone size={14} /> +91 9666236206</a>
                         <span className="divider">|</span>
                         <a href="mailto:msedifysolutions@gmail.com" className="top-contact"><Mail size={14} /> msedifysolutions@gmail.com</a>
                         <span className="divider hide-mobile">|</span>
-                        <a href="https://wa.me/919246377055" className="top-contact whatsapp-link hide-mobile"><WhatsAppIcon size={14} /> 92463 77055</a>
+                        <a href="https://wa.me/919154236206" className="top-contact whatsapp-link hide-mobile"><WhatsAppIcon size={14} /> 9154236206</a>
                     </div>
                     <div className="top-bar-right">
-                        <a href="https://www.instagram.com/ms.eduservices" className="top-contact" target="_blank" rel="noopener noreferrer"><InstagramIcon size={14} fill="colored" /> ms.eduservices</a>
+                        <a href="https://www.instagram.com/ms.eduservicesofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="top-contact" target="_blank" rel="noopener noreferrer"><InstagramIcon size={14} fill="colored" /> ms.eduservicesofficial</a>
                         <span className="divider">|</span>
                         <Link to="/about">About Us</Link>
                         <span className="divider">|</span>

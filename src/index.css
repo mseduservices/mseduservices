@@ -2,10 +2,10 @@
 
 :root {
   /* Colors */
-  --color-primary: #1a1a2e;
-  --color-primary-dark: #0f0f1a;
-  --color-accent: #2c2c3e;
-  --color-accent-light: #444466;
+  --color-primary: #19507d;
+  --color-primary-dark: #0f3352;
+  --color-accent: #19507d;
+  --color-accent-light: #3a7ab3;
   --color-white: #ffffff;
   --color-background: #ffffff;
   --color-background-alt: #f8fafc;

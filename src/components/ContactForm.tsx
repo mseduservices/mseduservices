@@ -11,13 +11,14 @@ const ContactForm = () => {
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
     // Make sure to replace this URL with your actual Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwem3NkznsPAtQEB2I6ls0A22kH7WfEu_nfcZzWFZVpip4j-YHlDl1IbgCPeZ8xGL8/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwsG2D66TodtyimvZAUJ2qWxU5wnwJcz43HhzymxwMsqUxzZyt4dL4MK5NUz3jpi_JY-Q/exec';
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -76,9 +77,8 @@ const ContactForm = () => {
                         name="category"
                         required
                         value={formData.category}
-                        onChange={handleChange as any}
-                        className="form-input"
-                        style={{ appearance: 'auto' }}
+                        onChange={handleChange}
+                        className="form-input form-select"
                     >
                         <option value="" disabled>Select Category</option>
                         <option value="B Tech">B Tech</option>

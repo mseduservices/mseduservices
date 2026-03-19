@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, ChevronRight } from 'lucide-react';
 import InstagramIcon from './InstagramIcon';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
-import logoImg from '../assets/logo_final.png';
+import logoImg from '../assets/logo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -20,7 +20,7 @@ const Footer = () => {
                         For Your Bright Future. Providing expert admission consultancy and comprehensive support since 2019.
                     </p>
                     <div className="social-links">
-                        <a href="https://www.instagram.com/ms.eduservices" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <a href="https://www.instagram.com/ms.eduservicesofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <InstagramIcon size={24} fill="colored" />
                         </a>
                     </div>

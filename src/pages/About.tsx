@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Reveal } from '../components/Reveal';
-import srinivasRao from '../assets/srinivas Roa.jpg';
+import sreenivasMothi from '../assets/srinivas Roa.jpg';
 import './About.css';
 const About = () => {
     return (
@@ -22,18 +22,24 @@ const About = () => {
                 </Reveal>
 
                 {/* Director Section */}
-                <div style={{ marginTop: '4rem' }}>
+                <div style={{ marginTop: '1rem' }}>
                     <Reveal>
                         <h2 className="about-block-title">Director</h2>
                     </Reveal>
                     <div className="director-wrap">
                         <Reveal initialY={30} delay={0.4}>
-                            <img src={srinivasRao} alt="Srinivasa Rao - Founder and Director" />
+                            <img src={sreenivasMothi} alt="Mr. Sreenivas Mothi, M.Tech - Founder and Director" />
                         </Reveal>
                         <Reveal delay={0.3}>
                             <div>
                                 <p className="about-block-text">
-                                    <strong>Mr. Srinivasa Rao</strong>, with his in-depth exposure and deep insights and knowledge pertaining to Engineering / Professional Education, is a professional with wide contacts across the education domain, colleges of Telangana, AP, and PAN INDIA. It is his personal and professional ethos that makes MS EDIFY a dependable, reliable, and trustworthy consultancy. He has steered MS EDIFY to success year after year, in offering professional support services in general and technical education in particular. He personally addresses and counsels students for choosing the suitable course and selection of the right college, clarifies students / parents doubts and advises them the best choices they can choose and prioritize the options during admission times. With his profound knowledge, Mr. Srinivasa Rao introduced innovative student and college connect programs, facilitating students to meet and interact with representatives of hundreds of PAN INDIA colleges.
+                                    <strong>Mr. Sreenivas Mothi, M.Tech</strong>, with his in-depth exposure, deep insights, and extensive knowledge in Engineering and Professional Education, is a distinguished professional with wide contacts across the education domain, including colleges in Telangana, Andhra Pradesh, and PAN India.
+
+                                    His strong personal values and professional ethos have made MS EDIFY a dependable, reliable, and trustworthy consultancy. Under his leadership, MS EDIFY has consistently achieved success year after year in providing professional support services in both general and technical education.
+
+                                    As a dedicated mentor, he personally guides Intermediate/12th passed students through EAMCET, DOST, NEET, and JoSAA web counselling processes. He helps students choose suitable courses and the right colleges, patiently clarifies the doubts of both students and parents, and provides expert advice to help them prioritize the best options during admissions.
+
+                                    With his profound knowledge and vision, Mr. Sreenivas Mothi has also introduced innovative student and college connect programs. These initiatives enable students to interact directly with representatives from hundreds of PAN India colleges, empowering them to make informed and confident decisions about their academic future.
                                 </p>
                             </div>
                         </Reveal>
@@ -41,7 +47,7 @@ const About = () => {
                 </div>
 
                 {/* Objectives and Mission */}
-                <div className="grid-2-col" style={{ marginTop: '4rem' }}>
+                <div className="grid-2-col" style={{ marginTop: '1rem', marginBottom: '4rem' }}>
                     <Reveal initialY={30}>
                         <div>
                             <h2 className="about-block-title">Objectives</h2>

@@ -180,7 +180,7 @@
 }
 
 .navbar-links a:hover {
-    background-color: rgba(15, 61, 145, 0.08);
+    background-color: rgba(25, 80, 125, 0.08);
     /* Light hover effect matching accent */
     color: var(--color-primary);
 }
@@ -188,7 +188,7 @@
 .navbar-links a.active {
     background-color: var(--color-primary);
     color: var(--color-white);
-    box-shadow: 0 4px 10px rgba(15, 61, 145, 0.2);
+    box-shadow: 0 4px 10px rgba(25, 80, 125, 0.2);
 }
 
 .nav-dropdown {
@@ -209,7 +209,7 @@
 }
 
 .nav-dropdown:hover .dropdown-trigger {
-    background-color: rgba(15, 61, 145, 0.08);
+    background-color: rgba(25, 80, 125, 0.08);
     color: var(--color-primary);
 }
 

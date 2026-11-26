@@ -59,7 +59,7 @@ const Diploma = () => {
     const description = (
         <>
             <p>Diploma courses offer a fast-track, highly practical route into the workforce. Focusing on hands-on skills rather than just theoretical knowledge, these programs are ideal for students looking to enter their chosen industry quickly and efficiently.</p>
-            <p className="mt-4">We guide students into top polytechnic and specialized colleges offering diplomas in core engineering, cutting-edge software development, vital medical lab technologies, and even agriculture. Secure direct admissions and build a strong technical foundation with MS EDIFY SOLUTIONS.</p>
+            <p className="mt-4">We guide students into top polytechnic and specialized colleges offering diplomas in core engineering, cutting-edge software development, vital medical lab technologies, and even agriculture. Secure direct admissions and build a strong technical foundation with MS Educational Services.</p>
         </>
     );
 

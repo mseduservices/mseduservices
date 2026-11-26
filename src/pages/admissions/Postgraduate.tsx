@@ -68,7 +68,7 @@ const Postgraduate = () => {
     const description = (
         <>
             <p>Taking your education to the next level with a Postgraduate degree opens up leadership opportunities, higher salary potential, and deep specialization in your chosen field. We assist students in securing admissions into premier master's programs across the country.</p>
-            <p className="mt-4">From elite MBA and PGDM programs that shape future business leaders, to highly specialized M.Tech, MCA, and M.Sc degrees in cutting-edge technologies like Cyber Security and Artificial Intelligence, MS EDIFY SOLUTIONS ensures you find the perfect university fit for your postgraduate aspirations.</p>
+            <p className="mt-4">From elite MBA and PGDM programs that shape future business leaders, to highly specialized M.Tech, MCA, and M.Sc degrees in cutting-edge technologies like Cyber Security and Artificial Intelligence, MS Educational Services ensures you find the perfect university fit for your postgraduate aspirations.</p>
         </>
     );
 

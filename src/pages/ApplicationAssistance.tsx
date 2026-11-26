@@ -47,7 +47,7 @@ const ApplicationAssistance = () => {
     return (
         <div className="admission-page">
             <Helmet>
-                <title>Application Assistance | MS EDIFY SOLUTIONS</title>
+                <title>Application Assistance | MS Educational Services</title>
                 <meta name="description" content="End-to-end application assistance including web options, certificate verification, and fee reimbursement." />
             </Helmet>
 
@@ -68,7 +68,7 @@ const ApplicationAssistance = () => {
                             <h2 className="section-heading mb-4">Why Do You Need Assistance?</h2>
                             <div className="text-muted leading-relaxed text-lg">
                                 <p>Securing a good rank is only half the battle. The admission counseling process—involving multi-stage web options, rigorous document verification, and seat allocation algorithms—is notoriously complex and stressful for students and parents alike.</p>
-                                <p className="mt-4">Even a minor mistake in option entry order or a missing document during verification can cost you a seat in a premier institution. <strong>MS EDIFY SOLUTIONS</strong> provides 100% genuine, end-to-end guidance to ensure you successfully navigate this maze and claim the seat you deserve.</p>
+                                <p className="mt-4">Even a minor mistake in option entry order or a missing document during verification can cost you a seat in a premier institution. <strong>MS Educational Services</strong> provides 100% genuine, end-to-end guidance to ensure you successfully navigate this maze and claim the seat you deserve.</p>
                             </div>
                         </div>
                         <div className="admission-intro-image">

@@ -62,8 +62,8 @@ const Home = () => {
     return (
         <div className="home-page">
             <Helmet>
-                <title>Home | MS EDIFY SOLUTIONS</title>
-                <meta name="description" content="MS EDIFY SOLUTIONS: Expert admission consultancy for B.Tech, MBA, Medical, and Abroad Admissions in Hyderabad." />
+                <title>Home | MS Educational Services</title>
+                <meta name="description" content="MS Educational Services: Expert admission consultancy for B.Tech, MBA, Medical, and Abroad Admissions in Hyderabad." />
                 <meta name="keywords" content="EAPCET Admissions in Hyderabad, MBA Admissions in Telangana, Management Quota Admissions, PGECET Admission Guidance, Study in UK Consultancy Hyderabad" />
             </Helmet>
 
@@ -116,7 +116,7 @@ const Home = () => {
                             <Reveal>
                                 <div>
                                     <p>
-                                        At MS EDIFY SOLUTIONS, our expert consultants are determined to help you apply to institutions that align with your potential and aspirations.
+                                        At MS Educational Services, our expert consultants are determined to help you apply to institutions that align with your potential and aspirations.
                                     </p>
                                     <Link to="/about" className="btn btn-primary btn-learn-more mt-4">Learn More</Link>
                                 </div>
@@ -133,11 +133,11 @@ const Home = () => {
                 <div className="container about-preview">
                     <div className="about-content">
                         <Reveal>
-                            <h2 className="section-heading">About MS EDIFY SOLUTIONS</h2>
+                            <h2 className="section-heading">About MS Educational Services</h2>
                         </Reveal>
                         <Reveal delay={0.35}>
                             <p className="about-text justify-mobile">
-                                Established in 2019, MS EDIFY SOLUTIONS has been a trusted name in educational consultancy. We believe in providing transparent, accurate, and comprehensive admission support to students striving for top-tier education.
+                                Established in 2019, MS Educational Services has been a trusted name in educational consultancy. We believe in providing transparent, accurate, and comprehensive admission support to students striving for top-tier education.
                             </p>
                         </Reveal>
                         <Reveal delay={0.45}>
@@ -151,7 +151,7 @@ const Home = () => {
                     </div>
                     <div className="about-image">
                         <Reveal initialY={40} delay={0.4}>
-                            <img src={aboutImg} alt="About MS EDIFY SOLUTIONS" />
+                            <img src={aboutImg} alt="About MS Educational Services" />
                         </Reveal>
                     </div>
                 </div>
@@ -234,7 +234,7 @@ const Home = () => {
                 <div className="container">
                     <div className="text-center mb-10">
                         <Reveal>
-                            <h2 className="section-heading text-white">Why Choose MS EDIFY SOLUTIONS</h2>
+                            <h2 className="section-heading text-white">Why Choose MS Educational Services</h2>
                         </Reveal>
                         <Reveal delay={0.3}>
                             <p className="section-subheading text-light-blue">Your journey to academic excellence begins with the right guidance.</p>
@@ -296,7 +296,7 @@ const Home = () => {
                                 <div className="stars">
                                     {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
                                 </div>
-                                <p className="review-text">"Thanks to MS EDIFY SOLUTIONS, I secured a seat in a top B.Tech college through EAPCET counselling. Their guidance was invaluable!"</p>
+                                <p className="review-text">"Thanks to MS Educational Services, I secured a seat in a top B.Tech college through EAPCET counselling. Their guidance was invaluable!"</p>
                                 <h4 className="student-name">- Rahul G.</h4>
                             </div>
                             <div className="testimonial-card">
@@ -340,7 +340,7 @@ const Home = () => {
                                 <div className="stars">
                                     {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
                                 </div>
-                                <p className="review-text">"Thanks to MS EDIFY SOLUTIONS, I secured a seat in a top B.Tech college through EAPCET counselling. Their guidance was invaluable!"</p>
+                                <p className="review-text">"Thanks to MS Educational Services, I secured a seat in a top B.Tech college through EAPCET counselling. Their guidance was invaluable!"</p>
                                 <h4 className="student-name">- Rahul G.</h4>
                             </div>
                             <div className="testimonial-card">

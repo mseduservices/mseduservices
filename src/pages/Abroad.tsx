@@ -38,7 +38,7 @@ const Abroad = () => {
     const description = (
         <>
             <p>Studying abroad is a transformative life experience that provides global exposure, world-class education, and vastly improved career prospects. However, the international application process can be daunting without expert guidance.</p>
-            <p className="mt-4">From shortlisting universities in the UK that match your profile, to facilitating direct MBA and MBBS admissions in affordable, globally-recognized institutions in Uzbekistan, MS EDIFY SOLUTIONS acts as your trusted partner. We handle everything from visa documentation and SOP writing to tracking your scholarship applications.</p>
+            <p className="mt-4">From shortlisting universities in the UK that match your profile, to facilitating direct MBA and MBBS admissions in affordable, globally-recognized institutions in Uzbekistan, MS Educational Services acts as your trusted partner. We handle everything from visa documentation and SOP writing to tracking your scholarship applications.</p>
         </>
     );
 

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import InstagramIcon from './InstagramIcon';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.jpeg';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -57,11 +57,11 @@ const Navbar = () => {
             <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="container navbar-container">
                     <Link to="/" className="navbar-logo" onClick={handleLogoClick}>
-                        <img src={logoImg} alt="MS EDIFY SOLUTIONS" className={isAnimating ? 'logo-animate' : ''} />
+                        <img src={logoImg} alt="MS Educational Services" className={isAnimating ? 'logo-animate' : ''} />
                         <span className="logo-text">
                             <span className="logo-text-black">MS</span>
-                            <span className="logo-text-blue">EDIFY</span>
-                            <span className="logo-text-black">SOLUTIONS</span>
+                            <span className="logo-text-blue">Educational</span>
+                            <span className="logo-text-black">Services</span>
                         </span>
                     </Link>
 

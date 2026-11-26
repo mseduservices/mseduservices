@@ -54,7 +54,7 @@ const Undergraduate = () => {
 
     const description = (
         <>
-            <p>Starting your undergraduate journey is a critical step towards building a successful career. At MS EDIFY SOLUTIONS, we provide expert counseling to help you choose the right bachelor's degree program that aligns with your passions and career goals.</p>
+            <p>Starting your undergraduate journey is a critical step towards building a successful career. At MS Educational Services, we provide expert counseling to help you choose the right bachelor's degree program that aligns with your passions and career goals.</p>
             <p className="mt-4">Whether you are aiming for top-tier Engineeering institutions, looking to explore new-age B.Sc programs in AI and Data Science, or pursuing a traditional BA / B.Com / BBA degree, our dedicated team will guide you through the entire admission process, including navigating state entrance exams like EAPCET and JEE.</p>
         </>
     );

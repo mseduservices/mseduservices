@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, ChevronRight } from 'lucide-react';
 import InstagramIcon from './InstagramIcon';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.jpeg';
 import './Footer.css';
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="container footer-container">
                 <div className="footer-col about-col">
-                    <img src={logoImg} alt="MS EDIFY SOLUTIONS" className="footer-logo" />
+                    <img src={logoImg} alt="MS Educational Services" className="footer-logo" />
                     <p className="footer-desc">
                         For Your Bright Future. Providing expert admission consultancy and comprehensive support since 2019.
                     </p>
@@ -84,7 +84,7 @@ const Footer = () => {
                         <button className="text-link-inline" onClick={() => setActiveModal('cancellation')}>Cancellation and Return Policy</button>
                     </div>
                     <p className="footer-copyright mt-2">
-                        Copyright {new Date().getFullYear()} &copy; <span className="highlight-text">MS EDIFY SOLUTIONS</span>, Developed & Maintained by: <a href="https://partha-theta.vercel.app/" target="_blank" rel="noopener noreferrer" className="highlight-text" style={{textDecoration: 'none'}}>Partha saradhi</a>
+                        Copyright {new Date().getFullYear()} &copy; <span className="highlight-text">MS Educational Services</span>, Developed & Maintained by: <a href="https://partha-theta.vercel.app/" target="_blank" rel="noopener noreferrer" className="highlight-text" style={{textDecoration: 'none'}}>Partha saradhi</a>
                     </p>
                 </div>
             </div>
@@ -92,10 +92,10 @@ const Footer = () => {
             {/* Legal Modals */}
             <Modal isOpen={activeModal === 'terms'} onClose={closeModal} title="Terms and Conditions">
                 <h4>Introduction</h4>
-                <p>Welcome to MS EDIFY SOLUTIONS. By accessing our website and utilizing our consultancy services, you agree to comply with and be bound by the following terms and conditions.</p>
+                <p>Welcome to MS Educational Services. By accessing our website and utilizing our consultancy services, you agree to comply with and be bound by the following terms and conditions.</p>
 
                 <h4>Our Services</h4>
-                <p>MS EDIFY SOLUTIONS provides educational consultancy, admission guidance, and application assistance. We do not guarantee admission to any specific university, as final decisions rest exclusively with the educational institutions.</p>
+                <p>MS Educational Services provides educational consultancy, admission guidance, and application assistance. We do not guarantee admission to any specific university, as final decisions rest exclusively with the educational institutions.</p>
 
                 <h4>User Responsibilities</h4>
                 <ul>
@@ -105,7 +105,7 @@ const Footer = () => {
                 </ul>
 
                 <h4>Limitation of Liability</h4>
-                <p>MS EDIFY SOLUTIONS shall not be liable for any indirect, incidental, or consequential damages resulting from the use of our guidance. Our liability is limited strictly to the service fees paid to us.</p>
+                <p>MS Educational Services shall not be liable for any indirect, incidental, or consequential damages resulting from the use of our guidance. Our liability is limited strictly to the service fees paid to us.</p>
             </Modal>
 
             <Modal isOpen={activeModal === 'privacy'} onClose={closeModal} title="Privacy Policy">
@@ -124,13 +124,13 @@ const Footer = () => {
 
             <Modal isOpen={activeModal === 'cancellation'} onClose={closeModal} title="Cancellation and Return Policy">
                 <h4>Cancellation of Services</h4>
-                <p>Students may cancel their consultancy engagement with MS EDIFY SOLUTIONS at any time by providing a written notice via email.</p>
+                <p>Students may cancel their consultancy engagement with MS Educational Services at any time by providing a written notice via email.</p>
 
                 <h4>Refund/Return Policy</h4>
                 <ul>
                     <li><strong>Before Application Submission:</strong> If you cancel before we have commenced the formal application process or slot booking on your behalf, a partial refund may be issued, minus administrative fees.</li>
-                    <li><strong>After Application Submission:</strong> Once applications, counseling slot bookings, or institutional fees have been processed, <strong>no refunds</strong> will be issued by MS EDIFY SOLUTIONS.</li>
-                    <li><strong>University Fees:</strong> Any tuition fees, application fees, or deposits paid directly to a university or college are subject to the respective institution's refund policy. MS EDIFY SOLUTIONS has no control over university refunds.</li>
+                    <li><strong>After Application Submission:</strong> Once applications, counseling slot bookings, or institutional fees have been processed, <strong>no refunds</strong> will be issued by MS Educational Services.</li>
+                    <li><strong>University Fees:</strong> Any tuition fees, application fees, or deposits paid directly to a university or college are subject to the respective institution's refund policy. MS Educational Services has no control over university refunds.</li>
                 </ul>
 
                 <h4>Processing Time</h4>

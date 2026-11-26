@@ -24,7 +24,7 @@ const AdmissionPageTemplate: React.FC<AdmissionPageTemplateProps> = ({ title, su
     return (
         <div className="admission-page">
             <Helmet>
-                <title>{title} | MS EDIFY SOLUTIONS</title>
+                <title>{title} | MS Educational Services</title>
                 <meta name="description" content={subtitle} />
             </Helmet>
 

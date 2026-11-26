@@ -6,8 +6,8 @@ const Contact = () => {
     return (
         <div className="page-content">
             <Helmet>
-                <title>Contact Us | MS EDIFY SOLUTIONS</title>
-                <meta name="description" content="Get in touch with MS EDIFY SOLUTIONS for expert admission guidance in Hyderabad." />
+                <title>Contact Us | MS Educational Services</title>
+                <meta name="description" content="Get in touch with MS Educational Services for expert admission guidance in Hyderabad." />
             </Helmet>
 
             <section className="section bg-light">

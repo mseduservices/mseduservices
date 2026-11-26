@@ -49,7 +49,7 @@ const Medical = () => {
     const description = (
         <>
             <p>A career in medicine and healthcare requires immense dedication, and getting into the right college is the foundational step. We offer extensive counseling and admission services for students aiming for MBBS, BDS, and various Allied Health Science programs.</p>
-            <p className="mt-4">Our experts demystify the complex medical admission process, providing clarity on NEET counseling, state quotas, management seats, and institution rankings. Let MS EDIFY SOLUTIONS help you secure a seat in India's top medical and paramedical colleges.</p>
+            <p className="mt-4">Our experts demystify the complex medical admission process, providing clarity on NEET counseling, state quotas, management seats, and institution rankings. Let MS Educational Services help you secure a seat in India's top medical and paramedical colleges.</p>
         </>
     );
 
